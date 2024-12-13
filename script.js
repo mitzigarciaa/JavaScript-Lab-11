@@ -45,6 +45,21 @@ let product2 = new ProductProperties('Makeup', 20.20, 6);
 let perishableProduct1 = new PerishableProductProperties('Milk', 1.50, 10, '2025-9-03');
 let perishableProduct2 = new PerishableProductProperties('Yogurt', 2.00, 15, '2025-06-28');
 
+// Part 4
+class Store {
+    constructor() {
+        this.inventory = []; 
+    } 
+
+    getInventoryValue() {
+        return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
+    }
+
+    findProductByName(name) {
+        return this.inventory.find(product => product.name === name) || null;
+    }
+}
+
 //Part 3 Apply a 10% discount 
 ProductProperties.applyDiscount([product1, product2, perishableProduct1, perishableProduct2], 0.1);
 
@@ -63,19 +78,4 @@ if (foundProduct) {
     console.log(`Found Product: ${foundProduct.toString()}`);
 } else {
     console.log('Product not found');
-}
-
-// Part 4
-class Store {
-    constructor() {
-        this.inventory = []; 
-    } 
-
-    getInventoryValue() {
-        return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
-    }
-
-    findProductByName(name) {
-        return this.inventory.find(product => product.name === name) || null;
-    }
 }
