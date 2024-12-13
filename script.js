@@ -72,6 +72,8 @@ console.log(perishableProduct2.toString());
 console.log("Store Inventory:");
 store.inventory.forEach(product => console.log(product.toString()));
 console.log(`Total Inventory Value: $${store.getInventoryValue().toFixed(2)}`);
+console.log("Total Inventory Value (After 15% Discount): $", store.getInventoryValue().toFixed(2));
+
 
 let foundProduct = store.findProductByName('Milk');
 if (foundProduct) {
