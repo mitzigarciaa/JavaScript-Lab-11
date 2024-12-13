@@ -58,6 +58,13 @@ console.log("Store Inventory:");
 store.inventory.forEach(product => console.log(product.toString()));
 console.log(`Total Inventory Value: $${store.getInventoryValue().toFixed(2)}`);
 
+let foundProduct = store.findProductByName('Milk');
+if (foundProduct) {
+    console.log(`Found Product: ${foundProduct.toString()}`);
+} else {
+    console.log('Product not found');
+}
+
 // Part 4
 class Store {
     constructor() {
