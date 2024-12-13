@@ -69,9 +69,9 @@ console.log(product2.toString());
 console.log(perishableProduct1.toString()); 
 console.log(perishableProduct2.toString());
 
-console.log("Store Inventory:");
-store.inventory.forEach(product => console.log(product.toString()));
-console.log(`Total Inventory Value: $${store.getInventoryValue().toFixed(2)}`);
+console.log("Total Inventory Value (Before Discount): $", store.getInventoryValue().toFixed(2));
+
+ProductProperties.applyDiscount(store.inventory, 0.15);
 console.log("Total Inventory Value (After 15% Discount): $", store.getInventoryValue().toFixed(2));
 
 
