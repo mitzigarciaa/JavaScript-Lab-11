@@ -48,6 +48,7 @@ let perishableProduct2 = new PerishableProductProperties('Yogurt', 2.00, 15, '20
 //Part 3 Apply a 10% discount 
 ProductProperties.applyDiscount([product1, product2, perishableProduct1, perishableProduct2], 0.1);
 
+let store = new Store();
 console.log(product1.toString());
 console.log(product2.toString());
 console.log(perishableProduct1.toString()); 
