@@ -56,6 +56,7 @@ console.log(perishableProduct2.toString());
 
 console.log("Store Inventory:");
 store.inventory.forEach(product => console.log(product.toString()));
+console.log(`Total Inventory Value: $${store.getInventoryValue().toFixed(2)}`);
 
 // Part 4
 class Store {
