@@ -54,6 +54,8 @@ console.log(product2.toString());
 console.log(perishableProduct1.toString()); 
 console.log(perishableProduct2.toString());
 
+console.log("Store Inventory:");
+store.inventory.forEach(product => console.log(product.toString()));
 
 // Part 4
 class Store {
