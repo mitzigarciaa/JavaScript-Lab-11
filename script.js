@@ -33,6 +33,11 @@ class PerishableProductProperties extends ProductProperties {
     }
 }
 
+
+//Part 3 Apply a 10% discount 
+ProductProperties.applyDiscount([product1, product2, perishableProduct1, perishableProduct2], 0.1);
+
+
 let product1 = new ProductProperties('Lipbalm', 2.50, 4);
 let product2 = new ProductProperties('Makeup', 20.20, 6);
 let perishableProduct1 = new PerishableProductProperties('Milk', 1.50, 10, '2025-9-03');
