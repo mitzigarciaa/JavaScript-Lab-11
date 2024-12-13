@@ -38,3 +38,6 @@ class PerishableProductProperties extends ProductProperties {
     }
 }
 
+let perishableProduct1 = new PerishableProductProperties('Milk', 1.50, 10, '2024-12-31');
+let perishableProduct2 = new PerishableProductProperties('Yogurt', 2.00, 15, '2025-01-15');
+
