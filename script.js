@@ -52,3 +52,19 @@ console.log(product1.toString());
 console.log(product2.toString());
 console.log(perishableProduct1.toString()); 
 console.log(perishableProduct2.toString());
+
+
+// Part 4
+class Store {
+    constructor() {
+        this.inventory = []; 
+    } 
+
+    getInventoryValue() {
+        return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
+    }
+
+    findProductByName(name) {
+        return this.inventory.find(product => product.name === name) || null;
+    }
+}
