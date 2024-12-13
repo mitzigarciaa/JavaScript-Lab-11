@@ -1,4 +1,4 @@
-// Base class for product properties
+// Part 1 Base class for product properties
 class ProductProperties {
     constructor(name, price, quantity) {
         this.name = name;
@@ -20,13 +20,8 @@ class ProductProperties {
 }
 
 
-// Example
-let product = new ProductProperties('Apple', 2.50, 50);
-console.log(product.getTotalValue());
-console.log(product.toString());
 
-
-// Subclass for perishable product properties
+// part 2 Subclass for perishable product properties
 class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
         super(name, price, quantity); // Call the parent class constructor
@@ -38,6 +33,8 @@ class PerishableProductProperties extends ProductProperties {
     }
 }
 
+let product1 = new ProductProperties('Lipbalm', 2.50, 4);
+let product2 = new ProductProperties('Makeup', 20.20, 6);
 let perishableProduct1 = new PerishableProductProperties('Milk', 1.50, 10, '2025-9-03');
 let perishableProduct2 = new PerishableProductProperties('Yogurt', 2.00, 15, '2025-06-28');
 
