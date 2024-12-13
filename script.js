@@ -26,4 +26,15 @@ console.log(product.getTotalValue());
 console.log(product.toString());
 
 
+// Subclass for perishable product properties
+class PerishableProductProperties extends ProductProperties {
+    constructor(name, price, quantity, expirationDate) {
+        super(name, price, quantity); // Call the parent class constructor
+        this.expirationDate = expirationDate;
+    }
+
+    toString() {
+        return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
+    }
+}
 
