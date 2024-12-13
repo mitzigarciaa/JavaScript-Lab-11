@@ -17,8 +17,15 @@ class ProductProperties {
     toString() {
         return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
     }
-}
 
+
+    // apply a discount to all products in an array
+    static applyDiscount(products, discount) {
+        products.forEach(product => {
+            product.price -= product.price * discount; // Reduce price by the discount percentage
+        });
+    }
+}
 
 
 // part 2 Subclass for perishable product properties
@@ -33,15 +40,13 @@ class PerishableProductProperties extends ProductProperties {
     }
 }
 
-
-//Part 3 Apply a 10% discount 
-ProductProperties.applyDiscount([product1, product2, perishableProduct1, perishableProduct2], 0.1);
-
-
 let product1 = new ProductProperties('Lipbalm', 2.50, 4);
 let product2 = new ProductProperties('Makeup', 20.20, 6);
 let perishableProduct1 = new PerishableProductProperties('Milk', 1.50, 10, '2025-9-03');
 let perishableProduct2 = new PerishableProductProperties('Yogurt', 2.00, 15, '2025-06-28');
+
+//Part 3 Apply a 10% discount 
+ProductProperties.applyDiscount([product1, product2, perishableProduct1, perishableProduct2], 0.1);
 
 console.log(product1.toString());
 console.log(product2.toString());
